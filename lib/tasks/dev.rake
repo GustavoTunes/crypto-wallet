@@ -9,9 +9,9 @@ namespace :dev do
 
       show_spinner("Migrating DB...") {%x(rails db:migrate)}
       
-      %x(rails dev:add_currencies)
-
       %x(rails dev:add_mining_types)
+
+      %x(rails dev:add_currencies)
 
     else
       puts "Not on the development environment!"
@@ -25,31 +25,36 @@ namespace :dev do
           {
               description: "Bitcoin",
               acronym: "BTC",
-              url_image: "https://pngimg.com/uploads/bitcoin/bitcoin_PNG7.png"
+              url_image: "https://pngimg.com/uploads/bitcoin/bitcoin_PNG7.png",
+              mining_type: MiningType.find_by(acronym: 'PoW')
           },
 
           {
               description: "Ethereum",
               acronym: "ETH",
-              url_image: "https://upload.wikimedia.org/wikipedia/commons/b/b7/ETHEREUM-YOUTUBE-PROFILE-PIC.png"
+              url_image: "https://upload.wikimedia.org/wikipedia/commons/b/b7/ETHEREUM-YOUTUBE-PROFILE-PIC.png",
+              mining_type: MiningType.find_by(acronym: 'PoW')
           },
 
           {
               description: "Dogecoin",
               acronym: "DOGE",
-              url_image: "https://cryptologos.cc/logos/dogecoin-doge-logo.png"
+              url_image: "https://cryptologos.cc/logos/dogecoin-doge-logo.png",
+              mining_type: MiningType.find_by(acronym: 'PoW')
           },
           
           {
-              description: "Tether",
-              acronym: "USDT",
-              url_image: "https://cryptologos.cc/logos/tether-usdt-logo.png?v=035"
+              description: "Cardano",
+              acronym: "ADA",
+              url_image: "https://cryptologos.cc/logos/cardano-ada-logo.png?v=035",
+              mining_type: MiningType.find_by(acronym: 'PoS')
           },
 
           {
               description: "Solana",
               acronym: "SOL",
-              url_image: "https://cryptologos.cc/logos/solana-sol-logo.png?v=035"
+              url_image: "https://cryptologos.cc/logos/solana-sol-logo.png?v=035",
+              mining_type: MiningType.all.sample
           }
       ]
 
