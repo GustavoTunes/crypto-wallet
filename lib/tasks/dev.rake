@@ -9,7 +9,7 @@ namespace :dev do
 
       show_spinner("Migrating DB...") {%x(rails db:migrate)}
       
-      show_spinner("Seeding DB...") {%x(rails db:migrate)}
+      show_spinner("Seeding DB...") {%x(rails db:seed)}
 
     else
       puts "Not on the development environment!"
