@@ -9,12 +9,71 @@ namespace :dev do
 
       show_spinner("Migrating DB...") {%x(rails db:migrate)}
       
-      show_spinner("Seeding DB...") {%x(rails db:seed)}
+      %x(rails dev:add_currencies)
+
+      %x(rails dev:add_mining_types)
 
     else
       puts "Not on the development environment!"
     end
   end
+
+  desc "Register the cryptocurrencies"
+  task add_currencies: :environment do
+    show_spinner("Registering Currencies...") do
+      coins =  [
+          {
+              description: "Bitcoin",
+              acronym: "BTC",
+              url_image: "https://pngimg.com/uploads/bitcoin/bitcoin_PNG7.png"
+          },
+
+          {
+              description: "Ethereum",
+              acronym: "ETH",
+              url_image: "https://upload.wikimedia.org/wikipedia/commons/b/b7/ETHEREUM-YOUTUBE-PROFILE-PIC.png"
+          },
+
+          {
+              description: "Dogecoin",
+              acronym: "DOGE",
+              url_image: "https://cryptologos.cc/logos/dogecoin-doge-logo.png"
+          },
+          
+          {
+              description: "Tether",
+              acronym: "USDT",
+              url_image: "https://cryptologos.cc/logos/tether-usdt-logo.png?v=035"
+          },
+
+          {
+              description: "Solana",
+              acronym: "SOL",
+              url_image: "https://cryptologos.cc/logos/solana-sol-logo.png?v=035"
+          }
+      ]
+
+      coins.each do | coin|
+          Coin.find_or_create_by!(coin)
+      end
+    end
+  end
+
+  desc "Register the mining types"
+  task add_mining_types: :environment do
+    show_spinner("Registering mining types...")do
+      mining_types = [
+        {name: "Proof of Work", acronym: "PoW"},
+        {name: "Proof of Stake", acronym: "PoS"},
+        {name: "Proof of Capacity", acronym: "PoC"}
+      ]
+
+      mining_types.each do |mining_type|
+        MiningType.find_or_create_by!(mining_type)
+      end
+    end
+  end
+
 
   private
 
