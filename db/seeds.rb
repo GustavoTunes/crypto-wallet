@@ -6,24 +6,32 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-puts "Registering Currencies..."
+spinner = TTY::Spinner.new("[:spinner] Registering Currencies...")
+spinner.auto_spin
 
-Coin.create!(
-    description: "Bitcoin",
-    acronym: "BTC",
-    url_image: "https://pngimg.com/uploads/bitcoin/bitcoin_PNG7.png"
-)
 
-Coin.create!(
-    description: "Ethereum",
-    acronym: "ETH",
-    url_image: "https://upload.wikimedia.org/wikipedia/commons/b/b7/ETHEREUM-YOUTUBE-PROFILE-PIC.png"
-)
+coins =  [
+    {
+        description: "Bitcoin",
+        acronym: "BTC",
+        url_image: "https://pngimg.com/uploads/bitcoin/bitcoin_PNG7.png"
+    },
 
-Coin.create!(
-    description: "Dogecoin",
-    acronym: "DOGE",
-    url_image: "https://cryptologos.cc/logos/dogecoin-doge-logo.png"
-)
+    {
+        description: "Ethereum",
+        acronym: "ETH",
+        url_image: "https://upload.wikimedia.org/wikipedia/commons/b/b7/ETHEREUM-YOUTUBE-PROFILE-PIC.png"
+    },
 
-puts "Currencies registered successfully!"
+    {
+        description: "Dogecoin",
+        acronym: "DOGE",
+        url_image: "https://cryptologos.cc/logos/dogecoin-doge-logo.png"
+    }   
+]
+
+coins.each do | coin|
+    Coin.find_or_create_by!(coin)
+end
+
+spinner.success("Currencies registered successfully!")
