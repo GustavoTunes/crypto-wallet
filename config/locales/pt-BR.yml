@@ -1,6 +1,32 @@
 "pt-BR":
   actual_locale: "Português do Brasil"
+  buttons:
+    update_currency: "Atualizar moeda"
+    create_currency: "Criar moeda"
+    crypto_registration: "Registrar Cryptomoeda"
+    mining_type_registration: "Registrar Tipo de mineração"
+  cryptocurrency: 
+    one: "Criptomoeda"
+    other: "Criptomoedas"    
+  languages:
+    portuguese: "Português"
+    english: "Inglês"  
   links:
     edit: "Editar"
+    back: "Voltar"
     show: "Mostrar"
     delete: "Apagar"
+    new_currency: "Nova moeda"
+    new_mining_type: "Novo Tipo de mineração"
+  messages:
+    confirm: "Você tem certeza?"
+    successful_create: "criada com sucesso"
+    successful_destroy: "deletada com sucesso"
+    successful_update: "atualizada com sucesso"
+  mining_type:
+    one: "Tipo de mineração"
+    other: "Tipos de mineração"
+  site_language: "Idioma do site"    
+  title: "Carteira de Cryptomoedas"
+  welcome: "Bem vindo, data"
+

@@ -1,10 +1,10 @@
-<p><%= link_to "Português", root_path(locale: "pt-BR") %></p>
+<p><%= link_to t("languages.portuguese"), root_path(locale: "pt-BR") %></p>
 
-<p><%= link_to "English", root_path(locale: "en") %></p>
+<p><%= link_to t("languages.english"), root_path(locale: "en") %></p>
 
-<h1>Cryptocurrency Wallet</h1>
+<h1> <%= t("title") %> </h1>
 
-<h3>Welcome, date: <%= l(Date.today) %></h3>
-<p>Site language: <strong> <%= t("actual_locale") %> </strong></p>
+<h3><%= t("welcome") %>: <%= l(Date.today) %> </h3>
+<p><%= t("site_language") %>: <strong> <%= t("actual_locale") %> </strong></p>
 
 <%= render "menu" %>

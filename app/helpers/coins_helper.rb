@@ -1,9 +1,9 @@
 module CoinsHelper
     def submit_button(form)
         if form.object.persisted?
-          "Update currency "
+          t("buttons.update_currency")
         else
-          "Create currency"
+          t("buttons.create_currency")
         end
     end
 end

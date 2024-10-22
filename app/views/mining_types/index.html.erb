@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Mining Types</h1>
+<h1><%= t("mining_type.other") %></h1>
 
 <table>
   <thead>
@@ -18,7 +18,7 @@
         <td><%= mining_type.acronym %></td>
         <td><%= link_to t("links.show"), mining_type %></td>
         <td><%= link_to t("links.edit"), edit_mining_type_path(mining_type) %></td>
-        <td><%= link_to t("links.delete"), mining_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t("links.delete"), mining_type, method: :delete, data: { confirm: t("messages.confirm") } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Mining Type', new_mining_type_path %>
+<%= link_to t("links.new_mining_type"), new_mining_type_path %>

@@ -25,7 +25,7 @@ class MiningTypesController < ApplicationController
 
     respond_to do |format|
       if @mining_type.save
-        format.html { redirect_to @mining_type, notice: "Mining type was successfully created." }
+        format.html { redirect_to @mining_type, notice: "#{t("mining_type.one")} #{t("messages.successful_create")}" }
         format.json { render :show, status: :created, location: @mining_type }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class MiningTypesController < ApplicationController
   def update
     respond_to do |format|
       if @mining_type.update(mining_type_params)
-        format.html { redirect_to @mining_type, notice: "Mining type was successfully updated." }
+        format.html { redirect_to @mining_type, notice: "#{t("mining_type.one")} #{t("messages.successful_update")}" }
         format.json { render :show, status: :ok, location: @mining_type }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class MiningTypesController < ApplicationController
     @mining_type.destroy
 
     respond_to do |format|
-      format.html { redirect_to mining_types_path, status: :see_other, notice: "Mining type was successfully destroyed." }
+      format.html { redirect_to mining_types_path, status: :see_other, notice: "#{t("mining_type.one")} #{t("messages.successful_destroy")}" }
       format.json { head :no_content }
     end
   end
