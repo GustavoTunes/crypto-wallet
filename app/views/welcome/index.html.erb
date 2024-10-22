@@ -1,10 +1,10 @@
-<p><%= link_to t("languages.portuguese"), root_path(locale: "pt-BR") %></p>
-
-<p><%= link_to t("languages.english"), root_path(locale: "en") %></p>
-
-<h1> <%= t("title") %> </h1>
-
-<h3><%= t("welcome") %>: <%= l(Date.today) %> </h3>
-<p><%= t("site_language") %>: <strong> <%= t("actual_locale") %> </strong></p>
-
-<%= render "menu" %>
+<div class="jumbotron jumbotron-fluid">
+  <h1 class="display-4"><%= t("welcome") %></h1>
+  <p class="lead"><%=t("messages.welcome")%></p>
+  <hr class="my-4">
+  <p><%= t("messages.button")%> </p>
+  <p class="lead">
+    <%= link_to t("buttons.crypto_registration"), coins_path, class:"btn btn-light", role:"button" %>
+    <%= link_to t("buttons.mining_type_registration"), mining_types_path, class:"btn btn-light", role:"button" %>
+  </p>
+</div>

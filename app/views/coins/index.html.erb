@@ -2,12 +2,12 @@
 
 <h1><%= t("cryptocurrency.other") %></h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th><%= @coins.human_attribute_name(:description)%></th>
       <th><%= @coins.human_attribute_name(:acronym)%></th>
-      <th><%= @coins.human_attribute_name("icon")%></th>
+      <th><%= @coins.human_attribute_name t("icon")%></th>
       <th colspan="3"></th>
     </tr>
   </thead>

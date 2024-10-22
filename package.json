@@ -1,5 +1,9 @@
 {
   "name": "crypto_wallet",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1",
+    "notify-js-legacy": "^0.4.1"
+  }
 }
