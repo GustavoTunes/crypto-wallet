@@ -1,23 +1,28 @@
 "pt-BR":
+  acronym: "Sigla"
   actual_locale: "Português do Brasil"
   buttons:
-    update_currency: "Atualizar moeda"
     create_currency: "Criar moeda"
     crypto_registration: "Registrar Cryptomoeda"
     mining_type_registration: "Registrar Tipo de mineração"
+    update_currency: "Atualizar moeda"
   cryptocurrency: 
     one: "Criptomoeda"
-    other: "Criptomoedas"    
+    other: "Criptomoedas"
+  description: "Descrição"
+  edit_currency: "Editar criptomoeda"
+  edit_mining_type: "Editar tipo de mineração"  
+  icon: "Ícone"
   languages:
+    english: "Inglês"
     portuguese: "Português"
-    english: "Inglês"  
   links:
-    edit: "Editar"
     back: "Voltar"
-    show: "Mostrar"
     delete: "Apagar"
+    edit: "Editar"
     new_currency: "Nova moeda"
-    new_mining_type: "Novo Tipo de mineração"
+    new_mining_type: "Novo tipo de mineração"
+    show: "Mostrar"
   messages:
     confirm: "Você tem certeza?"
     successful_create: "criada com sucesso"
@@ -26,7 +31,13 @@
   mining_type:
     one: "Tipo de mineração"
     other: "Tipos de mineração"
-  site_language: "Idioma do site"    
-  title: "Carteira de Cryptomoedas"
+  new:
+    fem: "Nova"
+    masc: "Novo"
+  new_currency: "New currency"
+  new_mining_type: "New mining type"
+  site_language: "Idioma do site"
+  title: "Carteira de cryptomoedas"
   welcome: "Bem vindo, data"
+  url_image: "URL da Imagem"
 
