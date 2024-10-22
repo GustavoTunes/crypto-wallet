@@ -28,6 +28,8 @@
     successful_create: "criada com sucesso"
     successful_destroy: "deletada com sucesso"
     successful_update: "atualizada com sucesso"
+    welcome: "Este é o Crypto Wallet, uma plataforma para registrar e acompanhar suas criptomoedas."
+    button: "Selecione uma opção abaixo:"
   mining_type:
     one: "Tipo de mineração"
     other: "Tipos de mineração"
@@ -38,6 +40,6 @@
   new_mining_type: "New mining type"
   site_language: "Idioma do site"
   title: "Carteira de cryptomoedas"
-  welcome: "Bem vindo, data"
+  welcome: "Bem vindo"
   url_image: "URL da Imagem"
 
