@@ -11,7 +11,10 @@
     other: "Criptomoedas"
   description: "Descrição"
   edit_currency: "Editar criptomoeda"
-  edit_mining_type: "Editar tipo de mineração"  
+  edit_mining_type: "Editar tipo de mineração"
+  errors:
+    messages:
+      url_image: "Insira a URL valida de uma imagem (png, jpg, jpeg)"
   icon: "Ícone"
   languages:
     english: "Inglês"
@@ -38,6 +41,7 @@
     masc: "Novo"
   new_currency: "New currency"
   new_mining_type: "New mining type"
+  select: "Selecione"
   site_language: "Idioma do site"
   title: "Carteira de cryptomoedas"
   welcome: "Bem vindo"

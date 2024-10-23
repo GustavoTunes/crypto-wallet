@@ -12,6 +12,9 @@ en:
   description: "Description"
   edit_currency: "Edit cryptocurrency"
   edit_mining_type: "Edit Mining type"
+  errors:
+    messages:
+      url_image: "Enter a valid URL image (png, jpg, jpeg)"
   icon: "Icon"
   languages:
     english: "English"
@@ -34,6 +37,7 @@ en:
     one: "Mining type"
     other: "Mining types"
   new: "New"
+  select: "Select"
   site_language: "Site language"
   title: "Cryptocurrency wallet"
   welcome: "Welcome"
