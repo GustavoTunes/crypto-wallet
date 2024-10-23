@@ -12,7 +12,7 @@ en:
   description: "Description"
   edit_currency: "Edit cryptocurrency"
   edit_mining_type: "Edit Mining type"
-  Icon: "Icon"
+  icon: "Icon"
   languages:
     english: "English"
     portuguese: "Portuguese"
