@@ -2,7 +2,7 @@
 
 <h1><%= Coin.model_name.human(count: @coins.count) %></h1>
 
-<table class="table table-hover">
+<table class="table table-hover table-light">
   <thead>
     <tr>
       <th><%= @coins.human_attribute_name(:description)%></th>
@@ -14,13 +14,13 @@
 
   <tbody>
     <% @coins.each do |coin| %>
-      <tr>
+      <tr> 
         <td><%= coin.description %></td>
         <td><%= coin.acronym %></td>
         <td><%= image_tag coin.url_image, size: 25 %></td>
-        <td><%= link_to t("links.show"), coin %></td>
-        <td><%= link_to t("links.edit"), edit_coin_path(coin) %></td>
-        <td><%= link_to t("links.delete"), coin, method: :delete, data: { confirm: t("messages.confirm") } %></td>
+        <td><%= link_to t("links.show"), coin, class: "text-decoration-none" %></td>
+        <td><%= link_to t("links.edit"), edit_coin_path(coin), class: "text-decoration-none" %></td>
+        <td><%= link_to t("links.delete"), coin, method: :delete, data: { confirm: t("messages.confirm") }, class: "text-decoration-none" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,6 +28,5 @@
 
 <br>
 
-<%= link_to t("links.new_currency") , new_coin_path, class:"btn btn-primary" %>
-<br><br>
 <%= link_to t("links.back"), root_path, class:"btn btn-secondary" %>
+<%= link_to t("links.new_currency") , new_coin_path, class:"btn btn-primary" %>

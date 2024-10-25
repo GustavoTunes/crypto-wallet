@@ -2,7 +2,7 @@
 
 <h1><%= MiningType.model_name.human(count: @mining_types.count) %></h1>
 
-<table class="table table-hover">
+<table class="table table-hover table-light">
   <thead>
     <tr>
       <th><%= @mining_types.human_attribute_name(:description) %></th>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= mining_type.description %></td>
         <td><%= mining_type.acronym %></td>
-        <td><%= link_to t("links.show"), mining_type %></td>
-        <td><%= link_to t("links.edit"), edit_mining_type_path(mining_type) %></td>
-        <td><%= link_to t("links.delete"), mining_type, method: :delete, data: { confirm: t("messages.confirm") } %></td>
+        <td><%= link_to t("links.show"), mining_type, class: "text-decoration-none" %></td>
+        <td><%= link_to t("links.edit"), edit_mining_type_path(mining_type), class: "text-decoration-none" %></td>
+        <td><%= link_to t("links.delete"), mining_type, method: :delete, data: { confirm: t("messages.confirm") }, class: "text-decoration-none" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,7 +26,5 @@
 
 <br>
 
-<%= link_to t("links.new_mining_type"), new_mining_type_path, class:"btn btn-primary" %>
-<br><br>
 <%= link_to t("links.back"), root_path, class:"btn btn-secondary" %>
-
+<%= link_to t("links.new_mining_type"), new_mining_type_path, class:"btn btn-primary" %>

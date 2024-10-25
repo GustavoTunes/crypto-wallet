@@ -2,20 +2,28 @@
 
 <%= image_tag @coin.url_image, size: 50 %>
 
-<p>
-  <strong><%= t("description") %>:</strong>
-  <%= @coin.description %>
-</p>
+<form>
+  <div class="mb-3", disable >
+    <%= label_tag nil, @coin.class.human_attribute_name(:description) %>
+    <%= text_field_tag nil, @coin.description, class:"form-control", disabled: true %>
+  </div>
 
-<p>
-  <strong><%= t("acronym") %>:</strong>
-  <%= @coin.acronym %>
-</p>
+  <div class="mb-3">
+    <%= label_tag nil, @coin.class.human_attribute_name(:acronym) %>
+    <%= text_field_tag nil, @coin.acronym, class:"form-control", disabled: true  %>
+  </div>
 
-<p>
-  <strong><%= t("url_image") %>:</strong>
-  <%= @coin.url_image %>
-</p>
+  <div class="mb-3">
+    <%= label_tag nil, @coin.class.human_attribute_name(:url_image) %>
+    <%= text_field_tag nil, @coin.url_image, class:"form-control", disabled: true  %>
+  </div>
 
-<%= link_to t("links.edit"), edit_coin_path(@coin) %> |
-<%= link_to t("links.back"), coins_path %>
+  <div class="mb-3">
+    <%= label_tag nil, @coin.class.human_attribute_name(:mining_type) %>
+    <%= text_field_tag nil, @coin.mining_type.description, class:"form-control", disabled: true %>
+  </div>
+</form>
+
+<br>
+<%= link_to t("links.back"), coins_path, class:"btn btn-secondary" %>
+<%= link_to t("links.edit"), edit_coin_path(@coin), class:"btn btn-primary" %>
