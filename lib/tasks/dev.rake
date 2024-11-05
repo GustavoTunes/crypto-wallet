@@ -46,14 +46,14 @@ namespace :dev do
           {
               description: "Cardano",
               acronym: "ADA",
-              url_image: "https://cryptologos.cc/logos/cardano-ada-logo.png",
+              url_image: "https://cryptologos.cc/logos/cardano-ada-logo.png?v=035",
               mining_type: MiningType.find_by(acronym: 'PoS')
           },
 
           {
               description: "Solana",
               acronym: "SOL",
-              url_image: "https://cryptologos.cc/logos/solana-sol-logo.png",
+              url_image: "https://cryptologos.cc/logos/solana-sol-logo.png?v=035",
               mining_type: MiningType.all.sample
           }
       ]
