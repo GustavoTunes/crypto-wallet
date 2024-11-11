@@ -38,8 +38,8 @@
     one: "Tipo de mineração"
     other: "Tipos de mineração"
   new:
-    fem: "Nova"
-    masc: "Novo"
+    one: "Nova"
+    other: "Novo"
   new_currency: "New currency"
   new_mining_type: "New mining type"
   select: "Selecione :"
