@@ -37,7 +37,9 @@ en:
   mining_type:
     one: "Mining type"
     other: "Mining types"
-  new: "New"
+  new:
+    one: "New"
+    other: "New"
   select: "Select :"
   site_language: "Site language"
   title: "Cryptocurrency wallet"
